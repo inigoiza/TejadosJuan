@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /aviso-legal.html
-Disallow: /privacidad.html
-Disallow: /cookies.html
-
+Disallow: /aviso-legalDisallow: /privacidadDisallow: /cookies
 Sitemap: https://tejadosjuan.com/sitemap.xml

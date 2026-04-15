@@ -211,12 +211,6 @@ ul { list-style: none; }
 }
 .header__cta:hover { background: var(--red); color: var(--white); }
 
-@media (max-width: 900px) {
-  .header__cta { display: none; }
-  .header__burger { display: flex; }
-  .header__nav { margin-right: 8px; }
-}
-
 .header__burger {
   display: none;
   flex-direction: column;
@@ -225,6 +219,13 @@ ul { list-style: none; }
   width: 44px; height: 44px;
   background: none; border: none; cursor: pointer; padding: 8px;
 }
+
+@media (max-width: 900px) {
+  .header__cta { display: none; }
+  .header__burger { display: flex; }
+  .header__nav { margin-right: 8px; }
+}
+
 .header__burger span {
   display: block; width: 100%; height: 2px;
   background: var(--navy); border-radius: 2px;

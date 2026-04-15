@@ -22,6 +22,30 @@ services:
         name: Cache-Control
         value: public, max-age=604800
     routes:
-      - type: rewrite
-        source: /index
-        destination: /index.html
+      - type: redirect
+        source: /index.html
+        destination: /
+      - type: redirect
+        source: /servicios.html
+        destination: /servicios
+      - type: redirect
+        source: /nosotros.html
+        destination: /nosotros
+      - type: redirect
+        source: /trabajos.html
+        destination: /trabajos
+      - type: redirect
+        source: /opiniones.html
+        destination: /opiniones
+      - type: redirect
+        source: /contacto.html
+        destination: /contacto
+      - type: redirect
+        source: /aviso-legal.html
+        destination: /aviso-legal
+      - type: redirect
+        source: /privacidad.html
+        destination: /privacidad
+      - type: redirect
+        source: /cookies.html
+        destination: /cookies
