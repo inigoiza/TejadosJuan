@@ -1299,6 +1299,8 @@ a.contact__info-value:hover { color: var(--red); }
   background: var(--gray-50);
   border-radius: var(--radius-lg);
   border: 1px solid var(--gray-200);
+  max-width: 100%;
+  text-align: center;
 }
 .reviews__score-number {
   font-family: var(--font-heading);
@@ -1311,7 +1313,7 @@ a.contact__info-value:hover { color: var(--red); }
 .reviews__score-label { font-size: 13px; color: var(--gray-500); }
 .reviews__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 24px;
   padding-bottom: 40px;
 }
@@ -1325,6 +1327,10 @@ a.contact__info-value:hover { color: var(--red); }
   flex-direction: column;
   gap: 16px;
   transition: transform var(--transition), box-shadow var(--transition);
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 .review-card:hover {
   transform: translateY(-4px);
@@ -1337,7 +1343,14 @@ a.contact__info-value:hover { color: var(--red); }
   color: var(--gray-700);
   font-style: italic;
   margin: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  min-width: 0;
 }
+.review-card__author { min-width: 0; flex-wrap: wrap; }
+.review-card__author > div { min-width: 0; flex: 1; }
+.review-card__name,
+.review-card__meta { overflow-wrap: break-word; word-wrap: break-word; }
 .review-card__author {
   display: flex;
   align-items: center;
@@ -1406,6 +1419,15 @@ a.contact__info-value:hover { color: var(--red); }
 }
 @media (max-width: 720px) {
   .review-form { grid-template-columns: 1fr; padding: 28px 20px; }
+  .reviews__grid { grid-template-columns: 1fr; }
+  .reviews__score { padding: 20px 24px; }
+  .reviews__score-number { font-size: 40px; }
+  .review-card { padding: 22px 20px; }
+}
+@media (max-width: 380px) {
+  .review-card { padding: 18px 16px; }
+  .review-card__text { font-size: 14px; }
+  .reviews__score-number { font-size: 34px; }
 }
 
 /* ---------- LEGAL ---------- */
