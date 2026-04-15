@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabajos realizados | Stop de Goteras - Soy Juan</title>
+  <meta name="description" content="Galería de trabajos realizados por Stop de Goteras - Soy Juan. Reparaciones, impermeabilizaciones y tejados nuevos en Madrid y Castilla-La Mancha.">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="assets/img/logo.png" alt="Stop de Goteras - Soy Juan" class="header__logo-img">
+      </a>
+      <nav class="header__nav" id="nav" aria-label="Navegación principal">
+        <ul class="header__menu">
+          <li><a href="index.html" class="header__link">Inicio</a></li>
+          <li><a href="servicios.html" class="header__link">Servicios</a></li>
+          <li><a href="nosotros.html" class="header__link">Nosotros</a></li>
+          <li><a href="trabajos.html" class="header__link active">Trabajos</a></li>
+          <li><a href="opiniones.html" class="header__link">Opiniones</a></li>
+          <li><a href="contacto.html" class="header__link">Contacto</a></li>
+        </ul>
+      </nav>
+      <a href="tel:642482003" class="header__cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        642 482 003
+      </a>
+      <button class="header__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <canvas class="hero__rain" id="rainCanvas" aria-hidden="true"></canvas>
+    <div class="page-hero__roof" id="pageRoof" aria-hidden="true">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polyline points="-5,75 50,18 105,75" fill="none" stroke="rgba(212,32,39,0.45)" stroke-width="0.6" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="container" style="position:relative;z-index:2;">
+      <nav class="breadcrumb">
+        <a href="index.html">Inicio</a>
+        <span class="breadcrumb__sep">/</span>
+        <span class="breadcrumb__current">Trabajos</span>
+      </nav>
+      <h1 class="page-hero__title">Nuestros trabajos</h1>
+      <p class="page-hero__subtitle">Cada trabajo habla por nosotros</p>
+    </div>
+    <div class="page-hero__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,80 C360,120 720,40 1080,80 C1260,100 1380,60 1440,80 L1440,120 L0,120 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Galería</span>
+        <h2 class="section-header__title">Proyectos realizados</h2>
+        <p class="section-header__desc">Aquí puedes ver algunos de los proyectos que hemos realizado para nuestros clientes en Madrid y Castilla-La Mancha.</p>
+      </div>
+      <div class="gallery__grid">
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/reparacion-01.jpeg" alt="Sellado de tejado metálico" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Reparación</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/impermeabilizacion-01.jpeg" alt="Impermeabilización de cumbrera" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Impermeabilización</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/tejado-nuevo-01.jpeg" alt="Tejado nuevo terminado" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Tejado nuevo</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/rehabilitacion-02.jpeg" alt="Rehabilitación de cubierta" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Rehabilitación</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/mallas-01.jpeg" alt="Mallas antipalomas en paneles solares" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Mallas antipalomas</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/impermeabilizacion-02.jpeg" alt="Sellado de cumbrera con impermeabilizante" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Impermeabilización</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/reparacion-03.jpeg" alt="Reparación junto a claraboya" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Reparación</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/tejado-nuevo-02.jpeg" alt="Tejado de teja nueva terminado" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Tejado nuevo</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/rehabilitacion-03.jpeg" alt="Rehabilitación en proceso" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Rehabilitación</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/reparacion-05.jpeg" alt="Sustitución de tejas" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Reparación</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/mallas-02.jpeg" alt="Mallas antipalomas instaladas" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Mallas antipalomas</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/general-01.jpeg" alt="Proyecto terminado vista exterior" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Proyecto terminado</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/impermeabilizacion-03.jpeg" alt="Impermeabilización de cumbrera y chimenea" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Impermeabilización</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/reparacion-06.jpeg" alt="Repunteo de cumbrera" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Reparación</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/mallas-03.jpeg" alt="Mallas antipalomas bajo paneles solares" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Mallas antipalomas</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/rehabilitacion-04.jpeg" alt="Rehabilitación con paneles solares" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Rehabilitación</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/reparacion-04.jpeg" alt="Sellado de cumbrera terminado" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Reparación</span></div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/img/trabajos/about.jpeg" alt="Equipo trabajando en un tejado" loading="lazy" width="400" height="300">
+          <div class="gallery__overlay"><span class="gallery__category">Nuestro equipo</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imagen">
+    <button class="lightbox__close" aria-label="Cerrar visor">&times;</button>
+    <img class="lightbox__img" src="" alt="">
+    <button class="lightbox__prev" aria-label="Imagen anterior">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="lightbox__next" aria-label="Imagen siguiente">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container cta-band__inner">
+      <div class="cta-band__text">
+        <h2 class="cta-band__title">¿Te gustaría un resultado así?</h2>
+        <p class="cta-band__desc">Pídenos presupuesto sin compromiso y te asesoramos.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a href="contacto.html" class="btn btn--white btn--lg">Pedir presupuesto</a>
+        <a href="tel:642482003" class="btn btn--outline-white btn--lg">642 482 003</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/img/logo.png" alt="Stop de Goteras - Soy Juan" class="footer__logo" width="140">
+        <p class="footer__desc">Profesionales en reparación, impermeabilización y rehabilitación de tejados en Madrid y Castilla-La Mancha desde 2011.</p>
+      </div>
+      <div class="footer__links">
+        <h4 class="footer__heading">Servicios</h4>
+        <ul>
+          <li><a href="servicios.html">Reparación de tejados</a></li>
+          <li><a href="servicios.html">Impermeabilización</a></li>
+          <li><a href="servicios.html">Tejados nuevos</a></li>
+          <li><a href="servicios.html">Rehabilitación de cubiertas</a></li>
+          <li><a href="servicios.html">Mallas antipalomas</a></li>
+          <li><a href="servicios.html">Poda de árboles altos</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4 class="footer__heading">Enlaces</h4>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="trabajos.html">Trabajos</a></li>
+          <li><a href="opiniones.html">Opiniones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4 class="footer__heading">Contacto</h4>
+        <ul>
+          <li><a href="tel:642482003">642 482 003</a></li>
+          <li><a href="mailto:juantejadosygoteras@gmail.com">juantejadosygoteras@gmail.com</a></li>
+          <li>Móstoles, Madrid</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; 2024 Stop de Goteras - Soy Juan. Todos los derechos reservados.</p>
+        <ul class="footer__legal">
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="privacidad.html">Política de privacidad</a></li>
+          <li><a href="cookies.html">Política de cookies</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" id="cookieBanner" hidden>
+    <div class="cookie-banner__inner">
+      <p class="cookie-banner__text">Utilizamos cookies técnicas propias para el correcto funcionamiento de la web. No utilizamos cookies de seguimiento ni publicitarias. Puedes consultar más información en nuestra <a href="cookies.html">Política de cookies</a>.</p>
+      <div class="cookie-banner__actions">
+        <button type="button" class="btn btn--primary" id="cookieAccept">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

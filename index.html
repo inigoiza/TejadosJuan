@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop de Goteras - Soy Juan | Reparación de Tejados en Madrid</title>
+  <meta name="description" content="Stop de Goteras - Soy Juan: 15 años de experiencia en reparación de tejados, impermeabilización y rehabilitación de cubiertas en Madrid y Castilla-La Mancha.">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="assets/img/logo.png" alt="Stop de Goteras - Soy Juan" class="header__logo-img">
+      </a>
+      <nav class="header__nav" id="nav" aria-label="Navegación principal">
+        <ul class="header__menu">
+          <li><a href="index.html" class="header__link active">Inicio</a></li>
+          <li><a href="servicios.html" class="header__link">Servicios</a></li>
+          <li><a href="nosotros.html" class="header__link">Nosotros</a></li>
+          <li><a href="trabajos.html" class="header__link">Trabajos</a></li>
+          <li><a href="opiniones.html" class="header__link">Opiniones</a></li>
+          <li><a href="contacto.html" class="header__link">Contacto</a></li>
+        </ul>
+      </nav>
+      <a href="tel:642482003" class="header__cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        642 482 003
+      </a>
+      <button class="header__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <canvas class="hero__rain" id="rainCanvas" aria-hidden="true"></canvas>
+    <!-- ESCENA PREMIUM: Casa con lluvia → tejado → protección -->
+    <div class="hero__scene" id="heroScene" aria-hidden="true">
+      <svg class="hero__scene-svg" viewBox="0 0 520 440" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#3B4F6E"/>
+            <stop offset="100%" stop-color="#2A3A54"/>
+          </linearGradient>
+          <linearGradient id="wallSideGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#2A3A54"/>
+            <stop offset="100%" stop-color="#1F2D42"/>
+          </linearGradient>
+          <linearGradient id="roofGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#D42027"/>
+            <stop offset="100%" stop-color="#A01820"/>
+          </linearGradient>
+          <linearGradient id="roofSideGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#B01A20"/>
+            <stop offset="100%" stop-color="#7A1115"/>
+          </linearGradient>
+          <linearGradient id="windowGlow" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(140,200,255,0.25)"/>
+            <stop offset="100%" stop-color="rgba(80,140,200,0.1)"/>
+          </linearGradient>
+          <linearGradient id="windowWarm" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(255,210,100,0.6)"/>
+            <stop offset="100%" stop-color="rgba(255,180,60,0.3)"/>
+          </linearGradient>
+          <linearGradient id="shieldGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#D42027"/>
+            <stop offset="100%" stop-color="#8B1117"/>
+          </linearGradient>
+          <linearGradient id="doorGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1A2540"/>
+            <stop offset="100%" stop-color="#0F1825"/>
+          </linearGradient>
+          <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="bigGlow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="softShadow"><feDropShadow dx="2" dy="6" stdDeviation="8" flood-color="rgba(0,0,0,0.5)"/></filter>
+          <clipPath id="houseClip"><rect x="155" y="180" width="210" height="150"/></clipPath>
+        </defs>
+
+        <!-- ====== CASA (suelo + paredes + alerta) ====== -->
+        <g class="scene__house" filter="url(#softShadow)">
+          <!-- Suelo -->
+          <line x1="100" y1="330" x2="420" y2="330" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <ellipse cx="260" cy="336" rx="140" ry="6" fill="rgba(0,0,0,0.2)"/>
+          <!-- Pared frontal -->
+          <rect x="155" y="195" width="210" height="135" rx="2" fill="url(#wallGrad)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+          <!-- Pared lateral (profundidad) -->
+          <polygon points="365,195 410,170 410,305 365,330" fill="url(#wallSideGrad)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <!-- Ventana izquierda -->
+          <rect class="scene__window" x="178" y="225" width="44" height="38" rx="2" fill="url(#windowGlow)" stroke="rgba(200,220,240,0.5)" stroke-width="1.5"/>
+          <line x1="200" y1="225" x2="200" y2="263" stroke="rgba(200,220,240,0.3)" stroke-width="1"/>
+          <line x1="178" y1="244" x2="222" y2="244" stroke="rgba(200,220,240,0.3)" stroke-width="1"/>
+          <!-- Ventana derecha -->
+          <rect class="scene__window" x="298" y="225" width="44" height="38" rx="2" fill="url(#windowGlow)" stroke="rgba(200,220,240,0.5)" stroke-width="1.5"/>
+          <line x1="320" y1="225" x2="320" y2="263" stroke="rgba(200,220,240,0.3)" stroke-width="1"/>
+          <line x1="298" y1="244" x2="342" y2="244" stroke="rgba(200,220,240,0.3)" stroke-width="1"/>
+          <!-- Puerta -->
+          <rect x="238" y="265" width="44" height="65" rx="3" fill="url(#doorGrad)" stroke="rgba(200,220,240,0.25)" stroke-width="1.5"/>
+          <rect x="241" y="268" width="38" height="26" rx="2" fill="rgba(140,200,255,0.06)"/>
+          <circle cx="273" cy="300" r="3.5" fill="#D4A530" stroke="#B8901F" stroke-width="0.5"/>
+          <!-- Icono alerta -->
+          <g class="scene__alert" filter="url(#glow)">
+            <circle cx="260" cy="170" r="18" fill="rgba(212,32,39,0.7)" stroke="#D42027" stroke-width="2"/>
+            <line x1="260" y1="160" x2="260" y2="173" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="260" cy="179" r="2" fill="#fff"/>
+          </g>
+        </g>
+
+        <!-- ====== TEJADO (fase 2: baja desde 4s) ====== -->
+        <g class="scene__roof" filter="url(#softShadow)">
+          <!-- Tejado principal -->
+          <polygon points="260,115 125,195 395,195" fill="url(#roofGrad)" stroke="#B01A20" stroke-width="2" stroke-linejoin="round"/>
+          <!-- Lado derecho tejado (profundidad) -->
+          <polygon points="395,195 440,170 305,90 260,115" fill="url(#roofSideGrad)" stroke="#8B1117" stroke-width="1"/>
+          <!-- Tejas decorativas fila 1 -->
+          <line x1="192" y1="158" x2="260" y2="130" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
+          <line x1="260" y1="130" x2="328" y2="158" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
+          <!-- Tejas fila 2 -->
+          <line x1="162" y1="175" x2="260" y2="145" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+          <line x1="260" y1="145" x2="358" y2="175" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+          <!-- Tejas fila 3 -->
+          <line x1="142" y1="187" x2="260" y2="155" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <line x1="260" y1="155" x2="378" y2="187" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <!-- Borde inferior -->
+          <line x1="122" y1="196" x2="398" y2="196" stroke="#7A1115" stroke-width="3"/>
+          <!-- Cumbrera -->
+          <line x1="260" y1="115" x2="305" y2="90" stroke="#B01A20" stroke-width="2.5"/>
+        </g>
+
+        <!-- ====== SALPICADURAS EN TEJADO (fase 3) ====== -->
+        <g class="scene__splashes">
+          <circle class="roof-splash" cx="195" cy="160" r="2" fill="rgba(140,200,255,0.7)"/>
+          <circle class="roof-splash" cx="230" cy="145" r="2" fill="rgba(140,200,255,0.6)"/>
+          <circle class="roof-splash" cx="260" cy="132" r="2" fill="rgba(140,200,255,0.7)"/>
+          <circle class="roof-splash" cx="295" cy="140" r="2" fill="rgba(140,200,255,0.6)"/>
+          <circle class="roof-splash" cx="340" cy="158" r="2" fill="rgba(140,200,255,0.7)"/>
+          <circle class="roof-splash" cx="360" cy="170" r="2" fill="rgba(140,200,255,0.5)"/>
+        </g>
+
+        <!-- ====== ESCUDO + CHECK (fase 3, arriba derecha) ====== -->
+        <g class="scene__shield">
+          <path d="M430,70 L458,84 L458,112 C458,132 430,146 430,146 C430,146 402,132 402,112 L402,84 Z"
+                fill="url(#shieldGrad)" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+          <polyline points="421,103 429,112 441,94" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+
+        <!-- Ventanas brillan dorado cuando casa protegida (fase 3) -->
+        <rect class="scene__window-glow" x="178" y="225" width="44" height="38" rx="2" fill="url(#windowWarm)"/>
+        <rect class="scene__window-glow" x="298" y="225" width="44" height="38" rx="2" fill="url(#windowWarm)"/>
+
+      </svg>
+    </div>
+    <div class="container hero__content">
+      <span class="hero__badge">Desde 2011 protegiendo tu hogar</span>
+      <h1 class="hero__title">
+        <span class="hero__title-line hero__title-line--1">Stop de goteras.</span>
+        <span class="hero__title-line hero__title-line--2">Soy Juan.</span>
+      </h1>
+      <p class="hero__subtitle">Reparación, impermeabilización y rehabilitación de tejados en <strong>Madrid y Castilla-La Mancha</strong>. Materiales de alta calidad y soluciones a medida.</p>
+      <div class="hero__actions">
+        <a href="contacto.html" class="btn btn--primary btn--lg hero__cta-pulse">Pedir presupuesto</a>
+        <a href="tel:642482003" class="btn btn--outline btn--lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Llamar ahora
+        </a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="15">0</span>
+          <span class="hero__stat-label">Años de experiencia</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="500">0</span>
+          <span class="hero__stat-label">Proyectos realizados</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="100">0</span>
+          <span class="hero__stat-label">% Garantía</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,80 C360,120 720,40 1080,80 C1260,100 1380,60 1440,80 L1440,120 L0,120 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- RESUMEN SERVICIOS -->
+  <section class="services" style="padding-bottom:60px;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Nuestros servicios</span>
+        <h2 class="section-header__title">Soluciones completas para tu tejado</h2>
+        <p class="section-header__desc">Ofrecemos un servicio integral con materiales de primera calidad. Cada proyecto es diferente, por eso trabajamos con presupuestos personalizados.</p>
+      </div>
+      <div class="services__grid">
+        <article class="service-card">
+          <div class="service-card__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="service-card__title">Reparación de tejados</h3>
+          <p class="service-card__desc">Reparamos goteras, tejas rotas, canalones y cualquier desperfecto con diagnóstico preciso.</p>
+          <a href="servicios.html" class="service-card__link">Ver más <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </article>
+        <article class="service-card">
+          <div class="service-card__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <h3 class="service-card__title">Impermeabilización</h3>
+          <p class="service-card__desc">Tratamientos profesionales para proteger tu cubierta contra filtraciones y humedades.</p>
+          <a href="servicios.html" class="service-card__link">Ver más <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </article>
+        <article class="service-card">
+          <div class="service-card__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="service-card__title">Tejados nuevos</h3>
+          <p class="service-card__desc">Instalación de tejados nuevos con los mejores materiales del mercado.</p>
+          <a href="servicios.html" class="service-card__link">Ver más <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </article>
+        <article class="service-card">
+          <div class="service-card__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>
+          </div>
+          <h3 class="service-card__title">Rehabilitación de cubiertas</h3>
+          <p class="service-card__desc">Rehabilitación integral de cubiertas deterioradas para devolver funcionalidad y seguridad.</p>
+          <a href="servicios.html" class="service-card__link">Ver más <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </article>
+        <article class="service-card">
+          <div class="service-card__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 4l4 4"/><path d="M20 4l-4 4"/><path d="M4 20l4-4"/><path d="M20 20l-4-4"/><path d="M8 8h8v8H8z"/></svg>
+          </div>
+          <h3 class="service-card__title">Mallas antipalomas</h3>
+          <p class="service-card__desc">Instalación de mallas y sistemas antipalomas para proteger tu tejado y fachada.</p>
+          <a href="servicios.html" class="service-card__link">Ver más <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </article>
+        <article class="service-card">
+          <div class="service-card__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M12 6c-3 0-5 2-5 5 0-3-2-5-5-5 3 0 5-2 5-5 0 3 2 5 5 5z"/><path d="M12 11c-3 0-5 2-5 5 0-3-2-5-5-5 3 0 5-2 5-5 0 3 2 5 5 5z"/><path d="M12 6c3 0 5 2 5 5 0-3 2-5 5-5-3 0-5-2-5-5 0 3-2 5-5 5z"/><path d="M12 11c3 0 5 2 5 5 0-3 2-5 5-5-3 0-5-2-5-5 0 3-2 5-5 5z"/></svg>
+          </div>
+          <h3 class="service-card__title">Poda de árboles muy altos</h3>
+          <p class="service-card__desc">Poda y retirada de árboles de gran altura cercanos a tejados, con equipos de altura y seguridad certificada.</p>
+          <a href="servicios.html" class="service-card__link">Ver más <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container cta-band__inner">
+      <div class="cta-band__text">
+        <h2 class="cta-band__title">¿Necesitas reparar o renovar tu tejado?</h2>
+        <p class="cta-band__desc">Llámanos y te hacemos un presupuesto sin compromiso.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a href="tel:642482003" class="btn btn--white btn--lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          642 482 003
+        </a>
+        <a href="contacto.html" class="btn btn--outline-white btn--lg">Pedir presupuesto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/img/logo.png" alt="Stop de Goteras - Soy Juan" class="footer__logo" width="140">
+        <p class="footer__desc">Profesionales en reparación, impermeabilización y rehabilitación de tejados en Madrid y Castilla-La Mancha desde 2011.</p>
+      </div>
+      <div class="footer__links">
+        <h4 class="footer__heading">Servicios</h4>
+        <ul>
+          <li><a href="servicios.html">Reparación de tejados</a></li>
+          <li><a href="servicios.html">Impermeabilización</a></li>
+          <li><a href="servicios.html">Tejados nuevos</a></li>
+          <li><a href="servicios.html">Rehabilitación de cubiertas</a></li>
+          <li><a href="servicios.html">Mallas antipalomas</a></li>
+          <li><a href="servicios.html">Poda de árboles altos</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4 class="footer__heading">Enlaces</h4>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="trabajos.html">Trabajos</a></li>
+          <li><a href="opiniones.html">Opiniones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4 class="footer__heading">Contacto</h4>
+        <ul>
+          <li><a href="tel:642482003">642 482 003</a></li>
+          <li><a href="mailto:juantejadosygoteras@gmail.com">juantejadosygoteras@gmail.com</a></li>
+          <li>Móstoles, Madrid</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; 2024 Stop de Goteras - Soy Juan. Todos los derechos reservados.</p>
+        <ul class="footer__legal">
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="privacidad.html">Política de privacidad</a></li>
+          <li><a href="cookies.html">Política de cookies</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" id="cookieBanner" hidden>
+    <div class="cookie-banner__inner">
+      <p class="cookie-banner__text">Utilizamos cookies técnicas propias para el correcto funcionamiento de la web. No utilizamos cookies de seguimiento ni publicitarias. Puedes consultar más información en nuestra <a href="cookies.html">Política de cookies</a>.</p>
+      <div class="cookie-banner__actions">
+        <button type="button" class="btn btn--primary" id="cookieAccept">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
