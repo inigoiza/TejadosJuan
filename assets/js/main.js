@@ -132,12 +132,25 @@
         var ry = rr.top - heroRect.top;
         var rw = rr.width;
         var rh = rr.height;
-        // SVG viewBox 100x100, roof: -5,75 → 50,18 → 105,75
-        roofLeft  = rx + (-5 / 100) * rw;
-        roofRight = rx + (105 / 100) * rw;
-        roofMid   = rx + 0.5 * rw;
-        roofPeak  = ry + 0.18 * rh;
-        roofBase  = ry + 0.75 * rh;
+        // Lee los puntos reales de la polyline para alinear splashes con la línea roja
+        var p1x = -5, p1y = 95, p2x = 50, p2y = -15, p3x = 105;
+        var pl = roofEl.querySelector('polyline');
+        if (pl) {
+          var raw = (pl.getAttribute('points') || '').trim().split(/\s+/);
+          if (raw.length === 3) {
+            var a = raw[0].split(','), b = raw[1].split(','), c = raw[2].split(',');
+            if (a.length === 2 && b.length === 2 && c.length === 2) {
+              p1x = parseFloat(a[0]); p1y = parseFloat(a[1]);
+              p2x = parseFloat(b[0]); p2y = parseFloat(b[1]);
+              p3x = parseFloat(c[0]);
+            }
+          }
+        }
+        roofLeft  = rx + (p1x / 100) * rw;
+        roofRight = rx + (p3x / 100) * rw;
+        roofMid   = rx + (p2x / 100) * rw;
+        roofPeak  = ry + (p2y / 100) * rh;
+        roofBase  = ry + (p1y / 100) * rh;
         hasShield = false;
       }
     }
