@@ -49,3 +49,27 @@ services:
       - type: redirect
         source: /cookies.html
         destination: /cookies
+      - type: rewrite
+        source: /servicios
+        destination: /servicios.html
+      - type: rewrite
+        source: /nosotros
+        destination: /nosotros.html
+      - type: rewrite
+        source: /trabajos
+        destination: /trabajos.html
+      - type: rewrite
+        source: /opiniones
+        destination: /opiniones.html
+      - type: rewrite
+        source: /contacto
+        destination: /contacto.html
+      - type: rewrite
+        source: /aviso-legal
+        destination: /aviso-legal.html
+      - type: rewrite
+        source: /privacidad
+        destination: /privacidad.html
+      - type: rewrite
+        source: /cookies
+        destination: /cookies.html
