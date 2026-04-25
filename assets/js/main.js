@@ -1,5 +1,5 @@
 /* ============================================
-   STOP DE GOTERAS - SOY JUAN
+   REPARACIÓN DE TEJADOS JUAN
    Main JavaScript + Animaciones
    ============================================ */
 (function () {
